@@ -1,0 +1,14 @@
+# v2.9 transparent hybrid deployment system. This is NOT a raw learned policy.
+model: models/metadrive_ppo_state_capability_distilled_v28.pt
+route_assist:
+  enabled: true
+  blend: 1.0
+  teacher: policy_visible_pure_pursuit
+safety_supervisor:
+  enabled: true
+  ttc_threshold_s: 1.8
+  risk_threshold: 0.68
+claim_boundary: >-
+  System-level simulation result only. Steering is transparently overridden by
+  a geometric route follower and longitudinal control may be overridden by the
+  SafetySupervisor; metrics must never be presented as raw-policy performance.

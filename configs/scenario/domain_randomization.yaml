@@ -1,0 +1,4 @@
+env:
+  randomize: true
+  curve_amplitude: 4
+  observation_noise: 0.02

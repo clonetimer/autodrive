@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "release_status": "cpu_research_preview",
+  "all_requested_targets_passed": false,
+  "native_end_to_end_verified": true,
+  "metadrive_real_training_verified": false,
+  "targets": {
+    "v1.1_metadrive_real_training": {
+      "state": "blocked",
+      "actual_steps": 0,
+      "evidence": "reports/metadrive_doctor.json"
+    },
+    "v1.2_marl": {
+      "state": "verified_in_native_backend_only",
+      "algorithms": [
+        "parameter_sharing_ippo",
+        "ctde_mappo"
+      ],
+      "evidence": "experiments/release/matrix.json"
+    },
+    "v1.3_bev": {
+      "state": "verified_semantic_truth_bev_cnn",
+      "raw_camera_perception": false,
+      "evidence": "experiments/release/ppo_bev/result.json"
+    },
+    "v2.0_end_to_end": {
+      "state": "verified_semantic_observation_to_control_native",
+      "production_ready": false,
+      "evidence": "videos/mappo_hybrid_seed2000.json"
+    }
+  },
+  "tests": {
+    "passed": 79,
+    "skipped": 5,
+    "failures": 0,
+    "errors": 0,
+    "source_line_coverage_percent": 84.99201703033529,
+    "scope": "Coverage over src includes unexecuted optional MetaDrive; scripts have separate real CLI validation.",
+    "evidence": "reports/tests_final.xml"
+  },
+  "cpu_experiments": {
+    "training_runs": 11,
+    "joint_world_steps": 245760,
+    "active_agent_transitions": 274249,
+    "measured_training_seconds_sum": 435.06024847599997,
+    "backend": "native",
+    "real_metadrive_steps": 0,
+    "disclaimer": "No dev smoke/unit-test optimizer steps included. Not a convergence or safety claim."
+  },
+  "model_reproducibility_recheck": true,
+  "cli_verified": true,
+  "wheel_build": "passed_no_dependencies_no_build_isolation; wheel is code-only, ZIP is canonical source+evidence delivery",
+  "archive_verification": "Final ZIP extract/test/hash attestation is provided alongside archive as rl_autodrive_agent_v2.0.0_verification.json",
+  "full_gate_blockers": [
+    "Missing real MetaDrive/Panda3D/Gymnasium/assets; sandbox package network failure",
+    "No raw-camera perception or real-world dataset evaluation",
+    "Learned driving reliability not sufficient in dense traffic and MARL"
+  ],
+  "no_background_work_after_delivery": true
+}

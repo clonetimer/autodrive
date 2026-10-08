@@ -1,0 +1,16 @@
+algorithm: mappo
+total_steps: 8192
+rollout_steps: 256
+epochs: 4
+batch_size: 128
+seed: 17
+env:
+  backend: native
+  observation: state
+  num_agents: 2
+  max_steps: 180
+  road_length: 150
+  traffic_vehicles: 4
+  target_speed: 12
+  initial_speed: 8
+  seed: 17

@@ -1,0 +1,17 @@
+algorithm: sac
+total_steps: 4096
+rollout_steps: 128
+batch_size: 64
+learning_starts: 256
+replay_size: 10000
+seed: 47
+env:
+  backend: native
+  observation: state
+  num_agents: 1
+  max_steps: 240
+  road_length: 180
+  traffic_vehicles: 3
+  target_speed: 12
+  initial_speed: 8
+  seed: 47

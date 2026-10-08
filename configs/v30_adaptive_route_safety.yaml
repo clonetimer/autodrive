@@ -1,0 +1,29 @@
+# v3.0 transparent learned-dominant shared-control deployment system.
+# This is NOT a raw learned policy and must be reported as a hybrid system.
+model: models/metadrive_ppo_state_capability_distilled_v28.pt
+route_assist:
+  enabled: true
+  mode: adaptive
+  max_blend: 0.5
+  min_blend: 0.0
+  teacher: policy_visible_pure_pursuit
+  difficulty:
+    curvature_start: 0.06
+    curvature_full: 0.28
+    heading_start_rad: 0.035
+    heading_full_rad: 0.18
+    normalized_lane_offset_start: 0.06
+    normalized_lane_offset_full: 0.30
+safety_supervisor:
+  enabled: true
+  ttc_threshold_s: 1.8
+  risk_threshold: 0.68
+metrics:
+  report_mean_route_blend: true
+  report_learned_steering_authority: true
+claim_boundary: >-
+  System-level MetaDrive simulation result only. Steering is a transparent
+  convex combination of the frozen neural actor and policy-visible pure-pursuit
+  RouteAssist; longitudinal action may be modified by SafetySupervisor. Mean
+  blend/authority and every intervention are reported separately. Never present
+  these metrics as raw learned-policy performance or a real-road safety claim.

@@ -1,0 +1,5 @@
+include: [ppo_reward_v3.yaml]
+total_steps: 16384
+env:
+  observation: bev_ego
+  bev_frames: 1

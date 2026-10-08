@@ -1,0 +1,16 @@
+algorithm: mappo
+total_steps: 100000
+rollout_steps: 256
+epochs: 4
+batch_size: 128
+seed: 17
+env:
+  backend: metadrive
+  observation: hybrid
+  num_agents: 2
+  max_steps: 500
+  dt: 0.1
+  substeps: 5
+  metadrive_map: S
+  metadrive_traffic_density: 0.1
+  seed: 17

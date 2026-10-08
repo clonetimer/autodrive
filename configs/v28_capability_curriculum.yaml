@@ -1,0 +1,26 @@
+stages:
+  - name: curve_tracking
+    metadrive_map: SCS
+    traffic_density: 0.10
+    target_speed: 10.0
+    max_steps: 650
+  - name: ramp_merge
+    metadrive_map: SrS
+    traffic_density: 0.08
+    target_speed: 9.0
+    max_steps: 750
+  - name: bottleneck_yield
+    metadrive_map: SyS
+    traffic_density: 0.10
+    target_speed: 9.0
+    max_steps: 700
+  - name: intersection_yield
+    metadrive_map: SXT
+    traffic_density: 0.04
+    target_speed: 8.0
+    max_steps: 700
+  - name: dense_progress
+    metadrive_map: SSS
+    traffic_density: 0.20
+    target_speed: 10.0
+    max_steps: 700

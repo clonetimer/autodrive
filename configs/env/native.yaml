@@ -1,0 +1,9 @@
+env:
+  backend: native
+  num_agents: 1
+  observation: state
+  max_steps: 240
+  road_length: 180
+  traffic_vehicles: 3
+  target_speed: 12
+  initial_speed: 8

@@ -1,0 +1,9 @@
+# Core CPU stack; optional real simulator dependencies are separate.
+numpy>=1.26,<3
+torch>=2.2,<3
+PyYAML>=6,<7
+Pillow>=10
+opencv-python>=4.8
+pytest>=8
+matplotlib>=3.8
+packaging>=24

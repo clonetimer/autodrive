@@ -1,0 +1,27 @@
+# Exact versions present during the v2.3.0 CPU + real MetaDrive validation.
+# The MetaDrive source/assets were supplied separately and are not redistributed here.
+numpy==2.3.5
+torch==2.10.0+cpu
+PyYAML==6.0.3
+Pillow==12.3.0
+opencv-python==4.13.0.92
+matplotlib==3.10.8
+packaging==25.0
+setuptools==82.0.1
+protobuf==6.33.6
+pytest==9.0.2
+pytest-cov==7.0.0
+coverage==7.13.3
+
+gymnasium==1.2.3
+metadrive-simulator==0.4.3
+Panda3D==1.10.16
+panda3d-gltf==0.15.0
+panda3d-simplepbr==0.13.1
+pygame==2.6.1
+progressbar==2.5
+mediapy==1.2.7
+yapf==0.43.0
+stable_baselines3==2.7.1
+tensorboard==2.21.0
+pettingzoo==1.27.0

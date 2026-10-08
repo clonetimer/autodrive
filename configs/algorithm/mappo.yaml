@@ -1,0 +1,6 @@
+algorithm: mappo
+rollout_steps: 256
+epochs: 4
+batch_size: 128
+env:
+  num_agents: 2

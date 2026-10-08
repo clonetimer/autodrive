@@ -1,0 +1,35 @@
+# v3.3 scene-aware temporal residual capability transfer.
+base_model: models/metadrive_ppo_state_capability_distilled_v28.pt
+adapter_type: scene_aware_temporal_residual_steering
+training:
+  algorithm: online_dagger_scene_aware_temporal_adapter_v3
+  split: scene_train
+  seeds: 37000-37011
+  stages: [curve_tracking, ramp_merge]
+  iterations: 3
+  teacher_mix_beta: [1.0, 0.5, 0.2]
+  teacher: fixed_policy_visible_pure_pursuit
+  teacher_blend: 0.5
+  history_len: 6
+  hidden_size: 128
+  neighbor_attention_heads: 4
+  use_neighbors: true
+  auxiliary_risk_head: true
+  # Opt-in only. The clean v3.3 representation mainline keeps this at zero;
+  # R0/R15 is evaluated by scripts/run_v33_risk_aux_ablation.py.
+  risk_loss_weight: 0.0
+  collection_safety: protected
+selection:
+  split: validation13
+  release_split: release16
+runtime:
+  geometric_route_assist: false
+  longitudinal_safety_supervisor: false
+  temporal_history: policy_visible_state_only
+  auxiliary_risk_head_controls_action: false
+claim_boundary: >-
+  The v3.3 adapter is learned from a geometric lateral teacher and optional
+  training-time SafetySupervisor risk labels. Neither RouteAssist nor the
+  SafetySupervisor is called by the raw release policy. The risk head is
+  diagnostic/representational only and does not modify controls. Results are
+  simulator research evidence, not a safety certification or real-car claim.

@@ -1,0 +1,31 @@
+algorithm: ppo
+total_steps: 192
+rollout_steps: 64
+epochs: 3
+batch_size: 32
+learning_rate: 0.0003
+gamma: 0.99
+gae_lambda: 0.95
+entropy_coef: 0.005
+hidden_size: 64
+checkpoint_every: 192
+seed: 59
+threads: 1
+device: cpu
+env:
+  backend: metadrive
+  observation: rgb_ego
+  rgb_width: 80
+  rgb_height: 40
+  reward_source: custom
+  reward_version: 4
+  reward: safe
+  num_agents: 1
+  max_steps: 160
+  dt: 0.1
+  substeps: 5
+  neighbors: 6
+  metadrive_map: S
+  metadrive_traffic_density: 0.10
+  target_speed: 15.0
+  seed: 59

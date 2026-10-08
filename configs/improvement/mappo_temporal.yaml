@@ -1,0 +1,6 @@
+include: [bev_temporal.yaml]
+algorithm: mappo
+total_steps: 8192
+env:
+  num_agents: 2
+  traffic_vehicles: 2

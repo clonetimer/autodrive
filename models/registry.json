@@ -1,0 +1,207 @@
+{
+  "ppo_state_seed7": {
+    "path": "experiments/release/ppo_state_seed7/model.pt",
+    "sha256": "c8d93d018d40c1537b5f7705d164e1d7dbe340821c276247c52739fff8f525e7",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 32768
+  },
+  "ppo_state_seed8": {
+    "path": "experiments/release/ppo_state_seed8/model.pt",
+    "sha256": "f7cff8cd920630d14d85e9338e42f258c91263e775bb3cc6ab345e02997300fa",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 32768
+  },
+  "ppo_state_seed9": {
+    "path": "experiments/release/ppo_state_seed9/model.pt",
+    "sha256": "294f5abcdd60625460a5d6dbfec46b630d582fcd4d21e463e4db80d160b97745",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 32768
+  },
+  "mappo_state": {
+    "path": "experiments/release/mappo_state/model.pt",
+    "sha256": "b15772dce2dd691d1515d057ad7d03d0c12e02641ff963f30f442b48bf88d08b",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "mappo",
+    "world_steps": 16384
+  },
+  "ppo_bev": {
+    "path": "experiments/release/ppo_bev/model.pt",
+    "sha256": "ed170e326923c1dd5f5c3c54f31c5b500c1f862675acff797800bf427cf986c1",
+    "backend": "native",
+    "input": "bev",
+    "algorithm": "ppo",
+    "world_steps": 16384
+  },
+  "mappo_hybrid": {
+    "path": "experiments/release/mappo_hybrid/model.pt",
+    "sha256": "a5e8631a49ea2c18b0e2655c1ad84f20b02a32c78ff7f268b9a8d3c109e36035",
+    "backend": "native",
+    "input": "hybrid",
+    "algorithm": "mappo",
+    "world_steps": 16384
+  },
+  "sac_state": {
+    "path": "experiments/release/sac_state/model.pt",
+    "sha256": "75b121d635efb6691721bbb753f563d5717ddc7c33a36ced93e1dd61b8f305a5",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "sac",
+    "world_steps": 8192
+  },
+  "reward_safe": {
+    "path": "experiments/release/reward_safe/model.pt",
+    "sha256": "bbc6cc2ad19ddd394f04f879d6b1b82a154f628436b95666201bff860975a330",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 8192
+  },
+  "reward_efficient": {
+    "path": "experiments/release/reward_efficient/model.pt",
+    "sha256": "56ca7b088ba577dcebe01683ad169857c421d5b337e58a02864ce274b67555bf",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 8192
+  },
+  "ippo_state": {
+    "path": "experiments/release/ippo_state/model.pt",
+    "sha256": "3a74c0d6d23d992093e4c8d932eb095c03bbac8a4f4923cb8d63f27302c0010e",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ippo",
+    "world_steps": 8192
+  },
+  "curriculum": {
+    "path": "experiments/curriculum_release/model.pt",
+    "sha256": "130a2c71f297dc1760e28a4c13befa9cb32b2505a4c932733fd0e19ed0752a4d",
+    "backend": "native",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 65536
+  },
+  "metadrive_ppo_state_32768": {
+    "path": "models/metadrive_ppo_state_32768.pt",
+    "backend": "metadrive",
+    "input": "state",
+    "algorithm": "ppo",
+    "world_steps": 32768,
+    "evaluation": "reports/v2_3/custom_metadrive_ppo_state_32768_eval/evaluation.json",
+    "sha256": "2499fe9fc8d3b9f02fdb8e82d0c71e6a554d5aa6b3e8a3847d2859da7860a8a5",
+    "status": "trained_real_metadrive_not_safety_certified"
+  },
+  "metadrive_mappo_hybrid_8192": {
+    "path": "models/metadrive_mappo_hybrid_8192.pt",
+    "backend": "metadrive",
+    "input": "hybrid",
+    "algorithm": "mappo",
+    "world_steps": 8192,
+    "evaluation": "reports/v2_3/custom_metadrive_mappo_hybrid_8192_eval/evaluation.json",
+    "sha256": "471aaf1665350d2223727020c3ee51f4c37ffee50ed17f2b120c54f3c870f19c",
+    "status": "trained_real_metadrive_not_safety_certified"
+  },
+  "metadrive_ppo_bev_ego4_4096": {
+    "path": "models/metadrive_ppo_bev_ego4_4096.pt",
+    "backend": "metadrive",
+    "input": "bev_ego",
+    "algorithm": "ppo",
+    "world_steps": 4096,
+    "evaluation": "reports/v2_3/custom_metadrive_ppo_bev_ego4_4096_eval/evaluation.json",
+    "sha256": "23f5cfb1263d72946a0d292c1c84fac48e59ecb297f5d84d45d502cfe250014b",
+    "status": "trained_real_metadrive_not_safety_certified"
+  },
+  "metadrive_official_sb3_ppo_4096": {
+    "path": "models/metadrive_official_sb3_ppo_4096.zip",
+    "backend": "metadrive",
+    "input": "official_lidar_state",
+    "algorithm": "sb3_ppo",
+    "world_steps": 4096,
+    "evaluation": "experiments/v2_3/metadrive_official_ppo_smoke4096/result.json",
+    "sha256": "81410654ffb6d5ba633f06cc9f24faeb2c01c53655e685085e6694b0c6aed55d",
+    "status": "trained_real_metadrive_not_safety_certified"
+  },
+  "metadrive_ppo_rgb_ego_384": {
+    "path": "models/metadrive_ppo_rgb_ego_384.pt",
+    "backend": "metadrive",
+    "input": "rgb_ego",
+    "algorithm": "ppo",
+    "world_steps": 384,
+    "evaluation": "reports/v2_4/rgb_ego_384_smoke_eval/evaluation.json",
+    "sha256": "2558b2068fa4931b5c751f54d1fd4867e5d0846838332a9785d22f98759c04dd",
+    "status": "raw_rgb_plus_motion_rl_smoke_only_not_driving_capable"
+  },
+  "metadrive_rgb_distilled_48_multiseed": {
+    "path": "models/metadrive_rgb_distilled_48_multiseed.pt",
+    "backend": "metadrive",
+    "input": "rgb_ego",
+    "algorithm": "behavior_cloning",
+    "teacher": "models/metadrive_ppo_state_32768.pt",
+    "samples": 48,
+    "evaluation": "reports/v2_4/rgb_distilled_48_multiseed_smoke/evaluation.json",
+    "sha256": "903ff4287e5f292ebcf7f2601b91aaa7eaca4b6a6c458c3ec347ada39aac0e83",
+    "status": "raw_rgb_plus_motion_behavior_clone_smoke_only_not_safety_certified"
+  },
+  "metadrive_ppo_state_safety_distilled_v25": {
+    "path": "models/metadrive_ppo_state_safety_distilled_v25.pt",
+    "backend": "metadrive",
+    "input": "state",
+    "algorithm": "ppo+safety_supervisor_distillation",
+    "source_model": "models/metadrive_ppo_state_32768.pt",
+    "source_rl_world_steps": 32768,
+    "distillation_samples": 1419,
+    "distillation_training_seeds": "8000-8011",
+    "selection_split": "validation:1000-1009",
+    "evaluation": "reports/v2_5/release4/curated_raw/evaluation.json",
+    "system_evaluation": "reports/v2_5/release4/curated_supervised/evaluation.json",
+    "sha256": "6802366593a897700fd0642b2d513342fe4450c6d7abe2b4748ecad0af261560",
+    "status": "heldout_improvement_but_raw_policy_not_safety_certified"
+  },
+  "metadrive_ppo_state_expert_distilled_v27": {
+    "path": "models/metadrive_ppo_state_expert_distilled_v27.pt",
+    "backend": "metadrive",
+    "input": "state",
+    "algorithm": "ppo+privileged_idm_expert_distillation",
+    "source_model": "models/metadrive_ppo_state_safety_distilled_v25.pt",
+    "source_rl_world_steps": 32768,
+    "expert_distillation_samples": 3529,
+    "expert_training_seeds": "10032-10047",
+    "teacher": "MetaDrive IDMPolicy lateral teacher; collection only",
+    "selection_split": "validation2:11000-11019 evaluated; domain reserved 11000-11199",
+    "selection_report": "reports/v2_7/selection_validation2.json",
+    "sha256": "1548b136b6e9260caa46a6d660a3e77a15b81e92fae8138c3789c67e56af255c",
+    "status": "validation2_promoted_release6_not_confirmed_not_safety_certified",
+    "release6_evaluation": "reports/v2_7/release6_selected_raw/suite_report.json",
+    "release6_system_evaluation": "reports/v2_7/release6_selected_supervised/suite_report.json",
+    "release6_raw_success_rate": 0.175,
+    "release6_raw_collision_rate": 0.8,
+    "release6_raw_out_of_road_rate": 0.025
+  },
+  "metadrive_ppo_state_capability_distilled_v28": {
+    "path": "models/metadrive_ppo_state_capability_distilled_v28.pt",
+    "backend": "metadrive",
+    "input": "state",
+    "algorithm": "behavior_cloning+privileged_idm_full_action_teacher",
+    "source_model": "models/metadrive_ppo_state_expert_distilled_v27.pt",
+    "source_rl_world_steps": 32768,
+    "expert_distillation_samples": 9000,
+    "expert_training_seeds": "13500-13529",
+    "teacher": "MetaDrive IDMPolicy full-action teacher; training only; 100% expert execution during collection",
+    "selection_split": "validation7:22000-22014 evaluated; domain reserved 22000-22199",
+    "selection_report": "reports/v2_8/selection_validation7.json",
+    "release11_evaluation": "reports/v2_8/release11_pureexpert/suite_report.json",
+    "release11_raw_success_rate": 0.32,
+    "release11_raw_collision_rate": 0.12,
+    "release11_raw_out_of_road_rate": 0.56,
+    "release11_raw_catastrophic_rate": 0.68,
+    "release11_mean_route_completion": 0.56156456271586,
+    "sha256": "e8346bd17b3cf9a78d5f987806bce19ada298841820bfa4805ced18ddef8b69c",
+    "status": "validation7_promoted_release11_aggregate_improvement_stage_specific_regressions_not_safety_certified"
+  }
+}

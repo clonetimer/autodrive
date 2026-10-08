@@ -1,0 +1,17 @@
+algorithm: ppo
+total_steps: 8192
+rollout_steps: 128
+epochs: 4
+batch_size: 64
+seed: 27
+env:
+  backend: native
+  observation: bev
+  bev_size: 48
+  num_agents: 1
+  max_steps: 180
+  road_length: 150
+  traffic_vehicles: 3
+  target_speed: 12
+  initial_speed: 8
+  seed: 27

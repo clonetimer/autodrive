@@ -1,0 +1,4 @@
+include: [../ppo_state.yaml]
+env:
+  reward_version: 3
+  bev_frames: 1

@@ -1,0 +1,12 @@
+{
+  "source_archive": "rl_autodrive_agent_v1.0.0.zip",
+  "sha256": "1adf501232555e544c9204642f7a384d4fa4ae0fba129aae40ed99eeb6184a39",
+  "findings": [
+    "Archive contains two inconsistent directory roots.",
+    "MetaDrive wrapper is only reset/step passthrough; no simulator creation.",
+    "SimpleDrive uses a fake Gym fallback when dependencies are absent.",
+    "No trained model weights or actual training logs are present.",
+    "Prior completion claims are not used as validation evidence."
+  ],
+  "action": "Rebuilt substantive modules; original uploaded archives remain unchanged outside release."
+}

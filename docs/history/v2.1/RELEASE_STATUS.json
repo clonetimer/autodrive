@@ -1,0 +1,73 @@
+{
+  "version": "2.1.0",
+  "release_status": "cpu_research_preview_not_full_acceptance",
+  "recorded_at_utc": "2026-09-07T04:29:16.593873+00:00",
+  "all_requested_targets_passed": false,
+  "native_end_to_end_verified": true,
+  "metadrive_real_training_verified": false,
+  "improvements": {
+    "reward_v3": "implemented_regression_and_three_seed_development_ablation",
+    "bev_ego_temporal": "implemented_real_cnn_optimization_and_closed_loop",
+    "sac_resume": "complete_learning_state_verified_bitwise_next_update_not_physics_continuation",
+    "offline_installation": "source_assets_wheel_checks_verified_actual_install_blocked",
+    "physical_comfort_metrics": "longitudinal_lateral_and_steering_time_weighted",
+    "failure_capture": "last_four_seconds_all_failed_rollouts_retained"
+  },
+  "tests": {
+    "passed": 127,
+    "skipped": 5,
+    "failures": 0,
+    "errors": 0,
+    "source_line_coverage_percent": 86.12521150592217,
+    "evidence": "reports/v2_1/pytest.xml",
+    "skipped_scope": "1 real Gymnasium checker and 4 real MetaDrive integration checks"
+  },
+  "new_cpu_experiments": {
+    "fresh_training_runs": 10,
+    "resume_segments": 1,
+    "inference_model_files": 11,
+    "joint_world_steps_executed": 241664,
+    "active_agent_transitions": 245799,
+    "elapsed_seconds_sum": 571.8288148709998,
+    "backend": "native",
+    "real_metadrive_steps": 0,
+    "evidence": "experiments/v2_1/matrix_results.json"
+  },
+  "development_evaluation": {
+    "scenario_policy_rollouts": 1100,
+    "agent_episodes": 1120,
+    "note": "Same scene seeds reused across policies; counts are not numbers of independent distinct scenes."
+  },
+  "confirmed_regressions": [
+    "Emergency success averaged over three seeds decreases from 25% to 14.1667%; not behavior-accepted.",
+    "Four-frame motion-augmented BEV PPO success 77.5% vs single-frame 92.5%, one training seed each."
+  ],
+  "legacy_reproduction": {
+    "seeds": [
+      7,
+      8,
+      9
+    ],
+    "steps_each": 32768,
+    "identical_weight_tensors_each": 9,
+    "evidence": "reports/v2_1/legacy_reproduction.json"
+  },
+  "cli_verified": [
+    "reports/v2_1/cli_smoke.json",
+    "reports/v2_1/new_cli_smoke.json"
+  ],
+  "full_gate_blockers": [
+    "MetaDrive/Gymnasium/SB3/Panda3D not installed; source assets missing; actual DNS failure.",
+    "Raw-camera perception and real dataset evaluation not implemented/verified.",
+    "Emergency driving regression and limited developmental evaluation.",
+    "TensorBoard UI/Docker build/official multi-agent API validation not run."
+  ],
+  "archive_verification": "Independent attestation is alongside the final archive; do not mutate distributed files after MANIFEST creation.",
+  "wheel_build": {
+    "status": "passed_no_dependencies_no_build_isolation",
+    "file": "rl_autodrive_agent-2.1.0-py3-none-any.whl",
+    "sha256": "e35164651b22628715ea3749f147604e62a6786afebc8352308d67bfd3cc40d7",
+    "scope": "code_only; canonical delivery is source/models/evidence ZIP"
+  },
+  "source_compilation": "compileall src/scripts/tests passed"
+}

@@ -1,0 +1,26 @@
+stages:
+  - name: curve_low_speed
+    metadrive_map: SCS
+    traffic_density: 0.02
+    target_speed: 7.0
+    max_steps: 700
+  - name: curve_moderate
+    metadrive_map: SCS
+    traffic_density: 0.10
+    target_speed: 9.0
+    max_steps: 700
+  - name: ramp_low_density
+    metadrive_map: SrS
+    traffic_density: 0.02
+    target_speed: 7.0
+    max_steps: 800
+  - name: ramp_moderate
+    metadrive_map: SrS
+    traffic_density: 0.08
+    target_speed: 9.0
+    max_steps: 800
+  - name: retention_dense
+    metadrive_map: SSS
+    traffic_density: 0.20
+    target_speed: 10.0
+    max_steps: 700

@@ -1,0 +1,134 @@
+{
+  "schema": "v42_consumed_validation15_development_selection_v1",
+  "status": "development_selection_complete",
+  "selection_domain": "validation15 (already consumed by v4.1; development-only reuse)",
+  "fresh_formal_selection_reserved": "validation16",
+  "final_release_reserved": "release19",
+  "development_training_seed": 12400,
+  "rule": {
+    "gate_1_standard": "require 15/15 success and zero collision/off-road on the consumed standard capability screen",
+    "gate_2_interaction": "among gate-1 passers, retain nontrivial interaction improvement; maximize interaction success then minimize catastrophic",
+    "reason": "v4.2 exists to recover incumbent standard capability before claiming interaction gains"
+  },
+  "variants": {
+    "G0": {
+      "capability": {
+        "success": 14,
+        "episodes": 15,
+        "success_rate": 0.9333333333333333,
+        "collision": 0,
+        "offroad": 0,
+        "timeout": 1,
+        "catastrophic": 0,
+        "mean_route_completion": 0.9757559832527076,
+        "mean_longitudinal_correction": 0.06729830627703608,
+        "mean_longitudinal_authority": 1.0
+      },
+      "interaction": {
+        "success": 9,
+        "episodes": 12,
+        "success_rate": 0.75,
+        "collision": 2,
+        "offroad": 1,
+        "timeout": 0,
+        "catastrophic": 3,
+        "mean_route_completion": 0.8738675313462002,
+        "mean_longitudinal_correction": 0.06160217055744513,
+        "mean_longitudinal_authority": 1.0
+      },
+      "passes_standard_gate": false
+    },
+    "GP": {
+      "capability": {
+        "success": 14,
+        "episodes": 15,
+        "success_rate": 0.9333333333333333,
+        "collision": 0,
+        "offroad": 0,
+        "timeout": 1,
+        "catastrophic": 0,
+        "mean_route_completion": 0.9697857121365505,
+        "mean_longitudinal_correction": 0.04985526123379411,
+        "mean_longitudinal_authority": 0.6736435356625337
+      },
+      "interaction": {
+        "success": 9,
+        "episodes": 12,
+        "success_rate": 0.75,
+        "collision": 2,
+        "offroad": 1,
+        "timeout": 0,
+        "catastrophic": 3,
+        "mean_route_completion": 0.8606270100626664,
+        "mean_longitudinal_correction": 0.06020195131256109,
+        "mean_longitudinal_authority": 0.9082164328657322
+      },
+      "passes_standard_gate": false
+    },
+    "GL": {
+      "capability": {
+        "success": 14,
+        "episodes": 15,
+        "success_rate": 0.9333333333333333,
+        "collision": 1,
+        "offroad": 0,
+        "timeout": 0,
+        "catastrophic": 1,
+        "mean_route_completion": 0.9719369761792797,
+        "mean_longitudinal_correction": 0.03294166488653159,
+        "mean_longitudinal_authority": 0.18916592663944357
+      },
+      "interaction": {
+        "success": 6,
+        "episodes": 12,
+        "success_rate": 0.5,
+        "collision": 4,
+        "offroad": 2,
+        "timeout": 0,
+        "catastrophic": 6,
+        "mean_route_completion": 0.7082228489051691,
+        "mean_longitudinal_correction": 0.046006761807144796,
+        "mean_longitudinal_authority": 0.2752643872829231
+      },
+      "passes_standard_gate": false
+    },
+    "GPL": {
+      "capability": {
+        "success": 15,
+        "episodes": 15,
+        "success_rate": 1.0,
+        "collision": 0,
+        "offroad": 0,
+        "timeout": 0,
+        "catastrophic": 0,
+        "mean_route_completion": 0.9822550090801367,
+        "mean_longitudinal_correction": 0.01915012913128727,
+        "mean_longitudinal_authority": 0.12609015653670544
+      },
+      "interaction": {
+        "success": 7,
+        "episodes": 12,
+        "success_rate": 0.5833333333333334,
+        "collision": 3,
+        "offroad": 2,
+        "timeout": 0,
+        "catastrophic": 5,
+        "mean_route_completion": 0.7743482097250304,
+        "mean_longitudinal_correction": 0.04750389240674093,
+        "mean_longitudinal_authority": 0.27186721366825933
+      },
+      "passes_standard_gate": true
+    }
+  },
+  "selected_variant": "GPL",
+  "formal_baseline_variant": "G0",
+  "formal_training_seeds": [
+    13400,
+    14400,
+    15400
+  ],
+  "development_seed_excluded_from_formal": 12400,
+  "validation16_accessed": false,
+  "release19_accessed": false,
+  "decision_sha256": "eb3c50e089c1fd1860843f65ba1190664ecb987abf1a00e1b82b76e7c93e042e"
+}

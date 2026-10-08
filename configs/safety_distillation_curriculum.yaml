@@ -1,0 +1,16 @@
+stages:
+  - name: straight_moderate
+    metadrive_map: S
+    traffic_density: 0.18
+    target_speed: 15.0
+    max_steps: 300
+  - name: straight_dense
+    metadrive_map: SSS
+    traffic_density: 0.32
+    target_speed: 14.0
+    max_steps: 320
+  - name: curve_dense
+    metadrive_map: SCS
+    traffic_density: 0.26
+    target_speed: 13.0
+    max_steps: 340

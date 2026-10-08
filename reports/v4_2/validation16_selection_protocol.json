@@ -1,0 +1,48 @@
+{
+  "schema": "v42_validation16_selection_protocol_v1",
+  "status": "pre_registered_before_validation16",
+  "candidate_treatments": [
+    "G0",
+    "GPL"
+  ],
+  "formal_training_seeds": [
+    13400,
+    14400,
+    15400
+  ],
+  "canonical_release_training_seed": 13400,
+  "incumbent": "v3.2 frozen lateral system (v2.8 base + v3.2 learned curve-route adapter; no runtime RouteAssist or SafetySupervisor)",
+  "selection_split": "validation16",
+  "release_split": "release19",
+  "validation16_accessed": false,
+  "release19_accessed": false,
+  "evaluation": {
+    "deployment": "raw learned policy; SafetySupervisor OFF; RouteAssist OFF",
+    "standard_suite": "capability",
+    "interaction_suite": "interaction",
+    "aggregation": "paired by scenario and training seed; do not treat 45/36 episodes as independent training repetitions"
+  },
+  "lexicographic_gate": [
+    "standard regression gate first",
+    "interaction safety and success second",
+    "continuous metrics only after binary gates",
+    "model complexity only as final tie-break"
+  ],
+  "standard_regression_gate": {
+    "aggregate_min_success": "44/45 across the three formal training seeds",
+    "aggregate_max_catastrophic": "1/45",
+    "curve_requirement": "no collision or off-road on any validation16 curve scenario across formal training seeds",
+    "canonical_seed_requirement": "seed 13400 must have at least 14/15 success and zero catastrophic"
+  },
+  "interaction_gate": {
+    "reference": "v3.2 incumbent evaluated once on the same 12 validation16 interaction scenarios, replicated only for paired treatment bookkeeping",
+    "requirements": [
+      "candidate aggregate catastrophic count must not exceed replicated incumbent catastrophic count",
+      "candidate aggregate success count must not be below replicated incumbent success count",
+      "at least one of success or catastrophic count must be strictly better"
+    ]
+  },
+  "release19_rule": "Only GPL may be promoted if it passes both gates and is not inferior to G0 under the same lexicographic rule. Release19 uses the precommitted seed-13400 GPL artifact; no best-seed selection is allowed.",
+  "no_promotion_rule": "If no treatment passes both gates, release19 remains unopened and v3.2 remains incumbent.",
+  "protocol_sha256": "ab08d3e145cf2ebca50854e1ab7d51a4152f53eac69e3ce814bd775482a85cb9"
+}

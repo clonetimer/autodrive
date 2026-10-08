@@ -1,0 +1,5 @@
+# Optional reference/official validation dependencies, NOT installed in this CPU sandbox.
+gymnasium>=0.29,<1.3
+stable-baselines3>=2.6,<3
+pettingzoo>=1.24,<2
+tensorboard>=2.16

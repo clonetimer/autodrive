@@ -1,0 +1,34 @@
+algorithm: ppo
+total_steps: 1024
+rollout_steps: 256
+epochs: 4
+batch_size: 128
+learning_rate: 0.00003
+gamma: 0.99
+gae_lambda: 0.95
+entropy_coef: 0.001
+hidden_size: 64
+checkpoint_every: 1024
+seed: 41
+threads: 1
+device: cpu
+reference_checkpoint: experiments/v2_3/custom_metadrive_ppo_state_resume_24576_to_32768/model.pt
+reference_kl_coef: 0.5
+env:
+  backend: metadrive
+  observation: state
+  reward_source: custom
+  reward_version: 4
+  reward: safe
+  num_agents: 1
+  max_steps: 300
+  dt: 0.1
+  substeps: 5
+  neighbors: 6
+  metadrive_map: S
+  metadrive_traffic_density: 0.18
+  target_speed: 15.0
+  seed: 41
+  safety_supervisor: true
+  safety_ttc_threshold_s: 1.8
+  safety_risk_threshold: 0.68

@@ -1,0 +1,22 @@
+# v3.1 learned lateral capability transfer.
+base_model: models/metadrive_ppo_state_capability_distilled_v28.pt
+adapter: models/metadrive_learned_route_adapter_v31.pt
+adapter_type: learned_residual_steering
+training:
+  algorithm: online_dagger
+  split: adapter_train
+  seeds: 31000-31014
+  iterations: 3
+  teacher_mix_beta: [1.0, 0.5, 0.2]
+  teacher: adaptive_policy_visible_pure_pursuit
+  teacher_max_blend: 0.5
+  longitudinal_collection_supervisor: true
+runtime:
+  geometric_route_assist: false
+  longitudinal_safety_supervisor: false
+claim_boundary: >-
+  The v3.1 adapter is learned from a geometric RouteAssist teacher but does not
+  call pure pursuit at inference. Raw adapter metrics therefore measure a learned
+  base-policy + learned-residual system. Longitudinal SafetySupervisor results,
+  when reported, remain a separate hybrid system and are not raw learned-policy
+  safety claims.

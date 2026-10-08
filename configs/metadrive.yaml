@@ -1,0 +1,16 @@
+algorithm: ppo
+total_steps: 100000
+rollout_steps: 512
+epochs: 5
+batch_size: 128
+seed: 7
+env:
+  backend: metadrive
+  observation: state
+  num_agents: 1
+  max_steps: 500
+  dt: 0.1
+  substeps: 5
+  metadrive_map: S
+  metadrive_traffic_density: 0.1
+  seed: 7

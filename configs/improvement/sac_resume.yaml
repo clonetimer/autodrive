@@ -1,0 +1,9 @@
+include: [ppo_reward_v3.yaml]
+algorithm: sac
+total_steps: 4096
+rollout_steps: 128
+epochs: 1
+batch_size: 64
+learning_starts: 128
+replay_size: 4096
+checkpoint_every: 2048

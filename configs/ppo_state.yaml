@@ -1,0 +1,19 @@
+algorithm: ppo
+total_steps: 32768
+rollout_steps: 256
+epochs: 6
+batch_size: 128
+learning_rate: 0.0003
+entropy_coef: 0.003
+seed: 7
+threads: 1
+env:
+  backend: native
+  observation: state
+  num_agents: 1
+  max_steps: 240
+  road_length: 180
+  traffic_vehicles: 3
+  target_speed: 12
+  initial_speed: 8
+  seed: 7

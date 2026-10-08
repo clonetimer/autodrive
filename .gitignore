@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+*.egg-info/
+.venv/
+external/
+*.part
+*.tmp
+reports/coverage_html/
+experiments/my_*/
+experiments/reproduced/

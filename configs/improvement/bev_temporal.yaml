@@ -1,0 +1,3 @@
+include: [bev_ego.yaml]
+env:
+  bev_frames: 4

@@ -1,0 +1,21 @@
+stages:
+  - name: curve_recovery_slow
+    metadrive_map: SCS
+    traffic_density: 0.00
+    target_speed: 6.0
+    max_steps: 800
+  - name: curve_recovery_moderate
+    metadrive_map: SCS
+    traffic_density: 0.08
+    target_speed: 8.0
+    max_steps: 800
+  - name: ramp_recovery_slow
+    metadrive_map: SrS
+    traffic_density: 0.02
+    target_speed: 7.0
+    max_steps: 850
+  - name: ramp_recovery_moderate
+    metadrive_map: SrS
+    traffic_density: 0.08
+    target_speed: 9.0
+    max_steps: 850

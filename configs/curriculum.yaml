@@ -1,0 +1,12 @@
+include:
+  - env/native.yaml
+  - algorithm/ppo.yaml
+  - reward/balanced.yaml
+curriculum: true
+curriculum_min_episodes: 20
+curriculum_success_threshold: 0.75
+curriculum_max_collision_rate: 0.15
+total_steps: 65536
+seed: 57
+env:
+  seed: 57

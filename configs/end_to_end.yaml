@@ -1,0 +1,20 @@
+algorithm: mappo
+total_steps: 8192
+rollout_steps: 128
+epochs: 4
+batch_size: 64
+seed: 37
+env:
+  backend: native
+  observation: hybrid
+  bev_size: 48
+  num_agents: 2
+  max_steps: 180
+  road_length: 150
+  traffic_vehicles: 4
+  target_speed: 12
+  initial_speed: 8
+  randomize: true
+  curve_amplitude: 2
+  observation_noise: 0.01
+  seed: 37

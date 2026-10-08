@@ -1,0 +1,6 @@
+stages:
+  - name: straight_dense
+    metadrive_map: SSS
+    traffic_density: 0.30
+    target_speed: 13.0
+    max_steps: 340
